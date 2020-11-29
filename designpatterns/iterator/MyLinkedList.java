@@ -55,7 +55,7 @@ public void addAtHead(T val) {
         ++size;
     }
 public void addAtTail(T val) {
-     Node node = new Node(val);
+     Node<T> node = new Node<>(val);
      if (size == 0) start = end = node;
      else {
          end.next = node;
