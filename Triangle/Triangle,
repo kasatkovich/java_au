@@ -1,1 +1,33 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
+class Triangle {
+    public Dot dot1, dot2, dot3;
+    public double square;
+    public double length1, length2, length3;
+
+    public Triangle(Dot dot1, Dot dot2, Dot dot3) {
+        this.dot1 = dot1;
+        this.dot2 = dot2;
+        this.dot3 = dot3;
+
+        CalcLength();
+    }
+
+    public void CalcLength() {
+        length1 = Math.pow((dot1.x - dot2.x) * (dot1.x - dot2.x) + (dot1.y - dot2.y) * (dot1.y - dot2.y), 0.5);
+        length2 = Math.pow((dot1.x - dot3.x) * (dot1.x - dot3.x) + (dot1.y - dot3.y) * (dot1.y - dot3.y), 0.5);
+        length3 = Math.pow((dot3.x - dot2.x) * (dot3.x - dot2.x) + (dot3.y - dot2.y) * (dot3.y - dot2.y), 0.5);
+
+    }
+
+    public boolean IsItTriangle() {
+        return ((length1 + length2) > length3) && ((length3 + length2) > length1) && ((length1 + length3) > length2);
+    }
+
+    public void CalcSquare() {
+        square = 0.5 * Math.abs((dot2.x - dot1.x) * (dot3.y - dot1.y) - (dot3.x - dot1.x) * (dot2.y - dot1.y));
+    }
+}
