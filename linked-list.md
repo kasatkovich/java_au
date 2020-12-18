@@ -9,6 +9,23 @@
 
 ## Reverse-Linked-List
 https://leetcode.com/problems/reverse-linked-list/
+
+``java
+public ListNode reverseList(ListNode head) {
+    ListNode curr = head;
+    ListNode newNext = null;
+    ListNode newPrev;
+    
+    while (curr != null){
+        newPrev = curr.next;
+        curr.next = newNext;
+        newNext = curr;
+        curr = newPrev;
+    }
+    
+    return newNext;
+}
+``
 ## Middle-Of-The-Linked-List
 https://leetcode.com/problems/middle-of-the-linked-list/
 ## Palindrome-Linked-List
