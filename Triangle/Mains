@@ -1,1 +1,5 @@
-
+class Mains {
+    public static void main(String[] args) {
+        Solution.read_file("f.txt");
+    }
+}
