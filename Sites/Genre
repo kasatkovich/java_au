@@ -1,1 +1,15 @@
+public enum Genre {
+    NO_BTS("no_bts"),
+    NO_SLASH("no_slash"),
+    NO_MINI("no_mini");
 
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    Genre(String name) {
+        this.name = name;
+    }
+}
