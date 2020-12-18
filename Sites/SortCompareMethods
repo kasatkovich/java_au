@@ -1,1 +1,29 @@
+import java.util.Arrays;
+import java.util.List;
 
+public class SortCompareMethods {
+    public static long slashCount(List<fanfic> fanfics){
+        long count  = fanfics.stream()
+                .filter(x -> x.getGenre().equals(Genre.NO_BTS))
+                .count();
+        long count2 = fanfics.stream()
+                .filter(x -> x.getGenre().equals(Genre.NO_SLASH))
+                .count();
+        long count3 = fanfics.stream()
+                .filter(x -> x.getGenre().equals(Genre.NO_MINI))
+                .count();
+        return count;
+    }
+
+    public static List<fanfic> generateFanficsList(){
+        return Arrays.asList(
+                new fanfic("he's what we call a bad guy",Genre.NO_BTS,Status.COMPLETE),
+                new fanfic("Гарри Поттер и Тренировочный Шарик",Genre.NO_BTS,Status.IN_PROGRESS),
+                new fanfic("Платина и шоколад",Genre.NO_SLASH,Status.COMPLETE),
+                new fanfic("Любовь с первого удара",Genre.NO_BTS,Status.COMPLETE),
+                new fanfic("Вопль",Genre.NO_MINI,Status.COMPLETE),
+                new fanfic("you look like an angel",Genre.NO_SLASH,Status.FROZEN),
+                new fanfic("Мы открываем бизнес, мы будем делать бабки ",Genre.NO_MINI,Status.CANCELLED)
+                );
+    }
+}
