@@ -1,1 +1,16 @@
+public enum Status {
+    IN_PROGRESS("in_progress"),
+    COMPLETE("complete"),
+    CANCELLED("cancelled"),
+    FROZEN("frozen");
 
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    Status(String name) {
+        this.name = name;
+    }
+}
