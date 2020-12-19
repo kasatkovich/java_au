@@ -1,0 +1,23 @@
+package Katya;
+
+import java.util.HashMap;
+import java.util.List;
+
+public class Methods {
+
+
+    public static HashMap<PointXY, Integer> makeHashMap(List<PointXY> pointxyList) {
+        HashMap<PointXY, Integer> hashMap = new HashMap<>();
+
+        for (PointXY pointxy : pointxyList) {
+            if (!hashMap.containsKey(pointxy)) {
+                hashMap.put(pointxy, 1);
+            }
+            else {
+                int value = hashMap.get(pointxy);
+                hashMap.replace(pointxy, value, value + 1);
+            }
+        }
+        return hashMap;
+    }
+}
