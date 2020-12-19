@@ -1,0 +1,24 @@
+1)public enum TrafficLight {
+  Red,
+  Green,
+  Yellow;
+}
+
+2)public class TrafficLight {
+
+   private String title;
+
+   private TrafficLight(String title) {
+       this.title = title;
+   }
+
+   public static TrafficLight Red = new TrafficLight("Красный");
+   public static TrafficLight Green = new TrafficLight("Зеленый");
+   public static TrafficLight Yellow = new TrafficLight("Желтый");
+   
+   public String toString() {
+       return "TrafficLight{" +
+               "title='" + title + '\'' +
+               '}';
+   }
+}
