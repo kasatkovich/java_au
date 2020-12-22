@@ -17,6 +17,27 @@ https://leetcode.com/problems/palindrome-linked-list/
 https://leetcode.com/problems/merge-two-sorted-lists/
 ## Intersection-Of-Two-Linked-Lists
 https://leetcode.com/problems/intersection-of-two-linked-lists/
+
+``java
+public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null)
+            return null;
+        ListNode headAPointer = headA;
+        ListNode headBPointer = headB;
+        
+        while(headAPointer != headBPointer){
+            if (headAPointer == null)
+                headAPointer = headB;
+            else
+                headAPointer = headAPointer.next;
+            if (headBPointer == null)
+                headBPointer= headA;
+            else
+                headBPointer = headBPointer.next;
+        }
+        return headAPointer;
+    }
+``
 ## Sort-List
 https://leetcode.com/problems/sort-list/
 ## Reorder List
