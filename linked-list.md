@@ -15,14 +15,12 @@ public ListNode reverseList(ListNode head) {
     ListNode curr = head;
     ListNode newNext = null;
     ListNode newPrev;
-    
     while (curr != null){
         newPrev = curr.next;
         curr.next = newNext;
         newNext = curr;
         curr = newPrev;
     }
-    
     return newNext;
 }
 ``
