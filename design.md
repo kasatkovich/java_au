@@ -41,7 +41,7 @@ public NestedIterator(List<NestedInteger> nestedList) {
         nestIt = null;
         return this.hasNext();
 }
-
+``
 ## lru Cache
 https://leetcode.com/problems/lru-cache/
 
