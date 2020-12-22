@@ -41,15 +41,11 @@ public void reorderList(ListNode head) {
             nodePtr1 = nodePtr1.next.next;
             nodePtr2 = temp2;
         }
-        
-    }
-    
-    private ListNode reverse(ListNode head) {
-        
+}
+private ListNode reverse(ListNode head) {
         ListNode previous = null;
         ListNode current = head;
         ListNode forward;
-        
         while (current != null) {
             forward = current.next;
             current.next = previous;
@@ -58,7 +54,6 @@ public void reorderList(ListNode head) {
         }
         return previous;
     }
-    
     private ListNode findMiddle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
@@ -67,5 +62,5 @@ public void reorderList(ListNode head) {
             slow = slow.next;
         }
         return slow;
-    }
+}
 ``
