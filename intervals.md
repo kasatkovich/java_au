@@ -7,18 +7,18 @@
 https://leetcode.com/problems/non-overlapping-intervals/
 ``java
 public int eraseOverlapIntervals(int[][] intervals) {
-        if (intervals == null || intervals.length == 0) return 0;
-        int numNonOverlapping = 1;
-        Arrays.sort(intervals, Comparator.comparingInt(a -> a[1]));
-        int endHolder = intervals[0][1];
-        for (int[] interval : intervals) {
-            if (interval[0] >= endHolder) {
-                numNonOverlapping++;
-                endHolder = interval[1];
-            }
+    if (intervals == null || intervals.length == 0) return 0
+    int numNonOverlapping = 1;
+    Arrays.sort(intervals, Comparator.comparingInt(a -> a[1]));
+    int endHolder = intervals[0][1];
+    for (int[] interval : intervals) {
+        if (interval[0] >= endHolder) {
+            numNonOverlapping++;
+            endHolder = interval[1];
         }
-        return intervals.length - numNonOverlapping;
     }
+    return intervals.length - numNonOverlapping;
+}
 ``
 ## Merge Intervals
 https://leetcode.com/problems/merge-intervals/
