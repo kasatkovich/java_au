@@ -20,11 +20,10 @@ https://leetcode.com/problems/intersection-of-two-linked-lists/
 
 ``java
 public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if (headA == null || headB == null)
-            return null;
-        ListNode headAPointer = headA;
-        ListNode headBPointer = headB;
-        
+if (headA == null || headB == null)
+    return null;
+ListNode headAPointer = headA;
+ListNode headBPointer = headB;
         while(headAPointer != headBPointer){
             if (headAPointer == null)
                 headAPointer = headB;
@@ -35,8 +34,8 @@ public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
             else
                 headBPointer = headBPointer.next;
         }
-        return headAPointer;
-    }
+return headAPointer;
+}
 ``
 ## Sort-List
 https://leetcode.com/problems/sort-list/
